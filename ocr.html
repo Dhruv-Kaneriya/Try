@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Best Free OCR</title>
+    
+    <link rel="stylesheet" href="css.css">
+
+<body>   
+<div class="page-header">
+      
+        <div class="row">
+           <div class="span12 whitebg">
+                       <h1>Free Online OCR</h1>
+                      <div class="column">
+                        <img src="upload.png">
+                        <div class="color-shade-1">
+                        <h3><strong>Upload File</strong></h3>
+                        </div>
+                       </div>
+                       <div class="column color-shade-2">
+                        <img src="start.png">
+                       <div class="color-shade-2">
+                        <h3><strong>Start OCR</strong></h3>
+                        </div>
+                       </div>
+                       <div class="column">
+                        <img src="result.png">
+                       <div class="color-shade-3">
+                        <h3><strong>Get  Result</strong></h3>
+                        </div>
+                       </div>
+                       <div class="column">
+                        <img src="overlay.png">
+                       <div class="color-shade-4">
+                        <h3><strong>Check Overlay</strong></h3>
+                        </div>
+                       </div>
+              </div>         
+        </div>             
+</div> 
+   
+    <h2>
+    <p id="instructions">Upload your image(s), select your language, and press "Run" to extract text. Copy the text from the box below or save the OCR results to a .txt file.</p>
+    </h2>
+    <h5>
+    <forms>
+    <input type="file" class = "btn-form" id="fileElementId" name="files[]" size="20" multiple="multiple" accept="image/*" />
+    </h5>
+    </forms>
+    <h3 class="main-dropdown">
+    <form method="post">
+        <label for="dropdown">Document Language:</label>
+        <select id="dropdown" name="dropdown" onchange="changeHiddenInput(this)">
+            <option value="eng">English</option>
+            <option value="rus">Russian</option>
+            <option value="ara">Arabic</option>
+            <option value="bul">Bulgarian</option>
+            <option value="ces">Czech</option>
+            <option value="chi_sim">Chinese - Simplified</option>
+            <option value="chi_tra">Chinese - Traditional</option>
+            <option value="fra">French</option>
+            <option value="deu">German</option>
+            <option value="heb">Hebrew</option>
+            <option value="ita">Italian</option>
+            <option value="jpn">Japanese</option>
+            <option value="lat">Latin</option>
+            <option value="pol">Polish</option>
+            <option value="por">Portuguese</option>
+            <option value="san">Sanskrit</option>
+            <option value="tam">Tamil</option>
+            <option value="ukr">Ukrainian</option>
+        </select>
+        <input type="hidden" name="hiddenInput" id="hiddenInput" value="" />
+    </form>
+    <br />
+    <input id="runOCR" type="button" class="btn" value="Run OCR!" />
+    <br />
+    <br />
+    <div id="result"></div>
+    <div id="ocr_results"><textarea id="TextArea"></textarea></div>
+    <div id="clear"></div>
+    </h3>
+    <h5>
+    <div id="ocr_status"> </div>
+    </h5>
+    <h3 class="main-dropdown"> 
+    <div class="form-group">
+        <label for="input-fileName">Filename:</label>
+        <input type="text" class="form-control" id="input-fileName" value="my_OCR" placeholder="Enter filename">
+        
+        <label for="input-fileFormat">Select Your Desired File Format:</label>
+        <select id="fileformat">
+        <option>Text File</option>
+        <option>PDF File</option>
+        </select>
+        
+        <button id="btn-save" type="submit" class="save-btn">Save to file</button>
+    </div>
+    </h3>
+    </body>
+    <script src="https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/tesseract.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/FileSaver.js"></script>
+    <script src="ocr.js"></script>
+    
+</body>
+</html>
